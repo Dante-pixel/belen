@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кровельные панели | BELENSTROY</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        .cards-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 30px !important;
+            margin-top: 40px !important;
+        }
+        .card {
+            display: flex !important;
+            flex-direction: column !important;
+            background: #ffffff !important;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+            padding-bottom: 25px !important;
+            overflow: hidden !important;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card-img {
+            height: 200px !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-color: #cccccc !important;
+            width: 100% !important;
+        }
+        .btn-card {
+            background: #8B0000; /* Ваш темно-красный цвет */
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0 auto;
+            transition: 0.3s;
+        }
+        .btn-card:hover { background: #111; }
+    </style>
+</head>
+<body style="background: #f4f4f4; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif;">
+
+<div class="container" style="padding: 100px 20px; max-width: 1200px; margin: 0 auto;">
+    <h1 style="color: #8B0000; font-weight: 800; text-transform: uppercase; margin-bottom: 40px; text-align: center;">Кровельные сэндвич-панели</h1>
+
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-img" style="background-image: url('photo/sspmin.jpg');"></div>
+            <h3 style="margin: 20px 0; color: #333;">Минеральная вата</h3>
+            <a href="krovlya-minvata.html" class="btn-card">Выбрать</a>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('photo/sppena.jpg');"></div>
+            <h3 style="margin: 20px 0; color: #333;">Пенополистирол</h3>
+            <a href="krovlya-penoplast.html" class="btn-card">Выбрать</a>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('photo/pir.jpg');"></div>
+            <h3 style="margin: 20px 0; color: #333;">PIR и PUR панели</h3>
+            <a href="pir-krovlya.html" class="btn-card">Выбрать</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; text-align: center;">
+       <p style="margin-top: 50px;">
+    <a href="sandwich-panels.html" style="color: #6b0100; font-weight: bold; text-decoration: none;">
+        ← Назад к выбору панелей
+    </a>
+</p>
+    </div>
+</div>
+
+</body>
+</html>
