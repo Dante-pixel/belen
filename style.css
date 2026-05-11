@@ -79,7 +79,7 @@ a { text-decoration: none; }
 .product-detail img { width: 100%; border-radius: 20px; }
 
 /* ПОДВАЛ (FOOTER) */
-.footer { background: #1a367c; color: #111; padding: 60px 0; position: relative; }
+.footer { background: #111; color: #fff; padding: 60px 0; position: relative; }
 .footer-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; }
 .footer-info p { margin-bottom: 12px; font-size: 15px; }
 .footer-phone { font-size: 28px; font-weight: 800; color: #fff; }
