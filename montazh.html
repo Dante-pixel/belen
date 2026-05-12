@@ -4,21 +4,100 @@
     <meta charset="UTF-8">
     <title>Монтаж сэндвич-панелей | BELENSTROY</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            /* Используем ваш крутой градиент RAL 7024 и RAL 5005 */
+            background: linear-gradient(135deg, #383e42 0%, #00538e 50%, #f4f4f4 100%);
+            background-attachment: fixed;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .product-detail {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.9); /* Эффект стекла */
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            align-items: center;
+        }
+        .image-box {
+            flex: 1;
+            min-width: 320px;
+        }
+        .image-box img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .info-box {
+            flex: 1.5;
+        }
+        h1 {
+            color: #6b0100;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .info-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .steps {
+            background: #6b0100;
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 25px;
+        }
+        .steps b {
+            color: #ffbcbc;
+            display: block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            color: #6b0100;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
-    <div class="container" style="padding: 120px 20px;">
-        <div class="product-detail" style="display: flex; gap: 50px; flex-wrap: wrap; background: #fff; padding: 40px; border-radius: 25px;">
-            <div style="flex: 1; min-width: 300px;">
-                <img src="montazh.jpg" style="width: 100%; border-radius: 20px;">
+    <div class="container">
+        <div class="product-detail">
+            <div class="image-box">
+                <img src="photo/montazh.jpg" alt="Профессиональный монтаж">
             </div>
-            <div style="flex: 1.5;">
-                <h1 style="color: #6b0100;">Профессиональный монтаж</h1>
-                <p>Мы не только производим, но и устанавливаем панели под ключ. Наши бригады имеют опыт работы более 10 лет.</p>
-                <p><strong>Этапы работ:</strong> Замеры, доставка, установка каркаса, монтаж панелей и доборных элементов.</p>
-                <a href="index.html" style="display: block; margin-top: 20px; color: #6b0100;">Вернуться на главную</a>
+
+            <div class="info-box">
+                <h1>Профессиональный монтаж</h1>
+                <p>Мы не только производим, но и устанавливаем панели <strong>под ключ</strong>. Наши опытные бригады гарантируют качество и надежность каждой конструкции, что гарантирует надежность каждой конструкции.</p>
+
+                <div class="steps">
+                    <b>Этапы работ:</b>
+                    Замеры • Доставка • Установка каркаса • Монтаж панелей • Доборные элементы
+                </div>
+
+                <a href="index.html" class="back-btn">← Вернуться на главную</a>
             </div>
         </div>
     </div>
-
-    </body>
+</body>
 </html>
