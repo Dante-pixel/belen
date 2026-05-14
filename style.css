@@ -1,7 +1,7 @@
 /* ОБЩИЕ СТИЛИ */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body { font-family: 'Montserrat', Arial, sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; }
+body { font-family: 'Montserrat', Arial, sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; overflow-x: hidden; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 a { text-decoration: none; }
 
@@ -12,7 +12,7 @@ a { text-decoration: none; }
 /* НАВИГАЦИЯ */
 .main-nav { background: #fff; padding: 20px 0; border-bottom: 3px solid #6b0100; position: sticky; top: 0; z-index: 1000; }
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: bold; font-size: 30px; text-transform: uppercase; color: #111; line-height: 1; }
+.logo { font-weight: bold; font-size: 26px; text-transform: uppercase; color: #111; line-height: 1; }
 .logo span { color: #6b0100; display: block; font-size: 14px; margin-top: 5px; }
 .menu { display: flex; list-style: none; gap: 25px; }
 .menu a { color: #333; font-weight: 600; transition: 0.3s; }
@@ -20,7 +20,7 @@ a { text-decoration: none; }
 
 /* ГЛАВНЫЙ БАННЕР (HERO) */
 .hero {
-    background: #333 url('maing.jpg') center center / cover no-repeat;
+    background: #333 url('photo/maing.jpg') center center / cover no-repeat;
     height: 500px;
     display: flex;
     align-items: center;
@@ -32,64 +32,86 @@ a { text-decoration: none; }
     content: ""; position: absolute; top:0; left:0; right:0; bottom:0;
     background: rgba(0,0,0,0.55);
 }
-.hero-content { position: relative; z-index: 2; width: 100%; }
-.hero h1 { font-size: 52px; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; }
+.hero-content { position: relative; z-index: 2; width: 100%; padding: 0 20px; }
+.hero h1 { font-size: 48px; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; line-height: 1.1; }
 .hero h1 span { color: #6b0100; }
-.hero p { font-size: 20px; margin-bottom: 30px; letter-spacing: 1px; }
+.hero p { font-size: 18px; margin-bottom: 30px; letter-spacing: 1px; }
 .btn-main { background: #6b0100; color: #fff; border: none; padding: 18px 45px; border-radius: 35px; font-weight: bold; cursor: pointer; font-size: 18px; transition: 0.3s; }
-.btn-main:hover { background: #660000; transform: translateY(-3px); } /* Заменено на более темный красный для ховера */
+.btn-main:hover { background: #8b0000; transform: translateY(-3px); }
 
 /* РАЗДЕЛ О НАС */
-.about { padding: 80px 0; background: #fff; }
+.about { padding: 60px 0; background: #fff; }
 .about-flex { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
 .about-text { flex: 1; min-width: 300px; }
-.about-text h2 { font-size: 36px; margin-bottom: 25px; }
+.about-text h2 { font-size: 32px; margin-bottom: 25px; }
 .about-text h2 span { color: #6b0100; }
-.about-text p { margin-bottom: 20px; font-size: 17px; color: #555; }
-.benefits { display: flex; gap: 30px; margin-top: 40px; }
-.benefit-item { text-align: center; }
-.benefit-item strong { display: block; font-size: 32px; color: #6b0100; }
-.benefit-item span { font-size: 13px; color: #888; text-transform: uppercase; font-weight: bold; }
+.about-text p { margin-bottom: 20px; font-size: 16px; color: #555; }
 
 /* КАРТОЧКИ УСЛУГ */
-.services { padding: 80px 0; text-align: center; }
-.services h2 { font-size: 36px; margin-bottom: 40px; }
+.services { padding: 60px 0; text-align: center; }
+.services h2 { font-size: 32px; margin-bottom: 40px; }
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 .card {
     background: #fff; border-radius: 20px; padding-bottom: 30px;
     overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: 0.3s; text-align: center;
+    display: flex; flex-direction: column; height: 100%;
 }
 .card.active { background: #6b0100; color: #fff; }
-.card-img { height: 200px; background-size: cover; background-position: center; width: 100%; }
-.card-img.small-img { background-size: 70%; background-color: #fff; background-repeat: no-repeat; }
-.card h3 { font-size: 19px; margin: 25px 15px; height: 50px; display: flex; align-items: center; justify-content: center; }
+.card-img { height: 220px; background-size: cover; background-position: center; width: 100%; }
+.card-img.small-img { background-size: contain; background-color: #fff; background-repeat: no-repeat; }
+.card h3 { font-size: 18px; margin: 25px 15px; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+
 .btn-card {
     background: #111; color: #fff; border: none; padding: 12px 30px;
     border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s;
-    display: inline-block;
+    display: inline-block; align-self: center;
 }
-
-/* СТРАНИЦА ТОВАРА (ДЕТАЛЬНО) */
-.product-detail { display: flex; gap: 50px; flex-wrap: wrap; background: #fff; padding: 40px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); margin-top: 50px; }
-.product-detail img { width: 100%; border-radius: 20px; }
+.card.active .btn-card { background: #fff; color: #6b0100; }
 
 /* ПОДВАЛ (FOOTER) */
-.footer { background: #000; color: #fff; padding: 60px 0; position: relative; }
+.footer { background: #000; color: #fff; padding: 60px 0; }
 .footer-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; }
-.footer-info p { margin-bottom: 12px; font-size: 15px; }
-.footer-phone { font-size: 28px; font-weight: 800; color: #fff; }
+.footer-info p { margin-bottom: 12px; font-size: 14px; }
+.footer-phone { font-size: 24px; font-weight: 800; color: #fff; }
 .social-icons { display: flex; gap: 15px; }
 .social-icons a { width: 45px; height: 45px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
 .social-icons img { width: 22px; }
 
 /* КНОПКИ СВЯЗИ */
-.fixed-contacts { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
-.btn-wa, .btn-call { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+.fixed-contacts { position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
+.btn-wa, .btn-call, .btn-inst { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: 0.3s; }
 .btn-wa { background: #25D366; }
 .btn-call { background: #43a047; }
-.btn-up { width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.btn-up { width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #fff; margin-bottom: 10px; }
+
+/* --- МОБИЛЬНАЯ АДАПТАЦИЯ (ТЕЛЕФОНЫ) --- */
+@media (max-width: 768px) {
+    .top-bar { display: none; } /* Скрываем верхнюю полоску на мобильных для экономии места */
+    
+    .nav-flex { flex-direction: column; gap: 15px; }
+    .logo { font-size: 22px; }
+    .menu { gap: 10px; font-size: 13px; flex-wrap: wrap; justify-content: center; }
+
+    .hero { height: 400px; }
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 15px; }
+
+    .about-flex { flex-direction: column; text-align: center; }
+    .about-text h2 { font-size: 26px; }
+
+    .cards-grid { 
+        grid-template-columns: 1fr; /* По одной карточке в ряд */
+        padding: 0 10px;
+    }
+    
+    .footer-flex { flex-direction: column; text-align: center; }
+    .footer-phone { font-size: 20px; }
+
+    .fixed-contacts { bottom: 15px; right: 15px; }
+    .fixed-contacts a { width: 50px !important; height: 50px !important; }
+}
