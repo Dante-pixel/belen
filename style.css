@@ -71,7 +71,7 @@ a { text-decoration: none; }
     border-radius: 25px; font-weight: bold; cursor: pointer; transition: 0.3s;
     display: inline-block; align-self: center;
 }
-.card.active .btn-card { background: #fff; color: #000; }
+.card.active .btn-card { background: #111; color: #000; }
 
 /* ПОДВАЛ (FOOTER) */
 .footer { background: #000; color: #fff; padding: 60px 0; }
