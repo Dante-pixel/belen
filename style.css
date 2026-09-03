@@ -13,7 +13,7 @@ a { text-decoration: none; }
 .main-nav { background: #fff; padding: 20px 0; border-bottom: 3px solid #6b0100; position: sticky; top: 0; z-index: 1000; }
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-weight: bold; font-size: 26px; text-transform: uppercase; color: #111; line-height: 1; }
-.logo span { color: #6b0100; display: block; font-size: 14px; margin-top: 5px; }
+.logo span { color: #FFFFFF; display: block; font-size: 14px; margin-top: 5px; }
 .menu { display: flex; list-style: none; gap: 25px; }
 .menu a { color: #333; font-weight: 600; transition: 0.3s; }
 .menu a:hover { color: #6b0100; }
